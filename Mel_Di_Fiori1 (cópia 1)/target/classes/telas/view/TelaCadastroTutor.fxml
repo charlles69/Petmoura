@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="crud_tutor.TutorCreateController"
+            stylesheets="@/css/style.css">
+            
+    <VBox alignment="TOP_CENTER" spacing="20" 
+          AnchorPane.topAnchor="30" AnchorPane.bottomAnchor="30" 
+          AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+        
+        <Label text="👤 Cadastro de Tutor" 
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" prefWidth="120"/>
+                <ColumnConstraints halignment="LEFT" prefWidth="300"/>
+            </columnConstraints>
+            
+            <!-- Nome -->
+            <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="txtNome" promptText="Nome completo" 
+                      prefWidth="300" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            
+            <!-- CPF -->
+            <Label text="CPF:" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="txtCpf" promptText="000.000.000-00" 
+                      prefWidth="300" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            
+            <!-- Telefone -->
+            <Label text="Telefone:" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="txtTelefone" promptText="(00) 00000-0000" 
+                      prefWidth="300" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            
+            <!-- Email -->
+            <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="txtEmail" promptText="email@exemplo.com" 
+                      prefWidth="300" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            
+            <!-- Endereço -->
+            <Label text="Endereço:" GridPane.rowIndex="4" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextArea fx:id="txtEndereco" promptText="Endereço completo" 
+                     prefRowCount="3" prefWidth="300" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Botões -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="⬅️ Voltar" onAction="#voltarParaLista" 
+                    styleClass="btn-secondary"/>
+            <Button text="🗑️ Limpar" onAction="#limparCampos" 
+                    styleClass="btn-danger"/>
+            <Button text="💾 Salvar" onAction="#salvarTutor" 
+                    styleClass="btn-success"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

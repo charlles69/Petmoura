@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="20" alignment="TOP_CENTER"
+      style="-fx-background-color: white; -fx-padding: 30;"
+      stylesheets="@/css/style.css">
+
+    
+    <Label text="📊 Dashboard do Vet"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <HBox spacing="30">
+        <VBox spacing="10" style="-fx-background-color: #e3f2fd; -fx-padding: 20; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Label text="Total de Colmeias:" style="-fx-font-size: 14px;" />
+            <Label text="15" style="-fx-font-size: 24px; -fx-text-fill: #1976d2;" />
+        </VBox>
+
+        <VBox spacing="10" style="-fx-background-color: #fce4ec; -fx-padding: 20; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Label text="Produção (mês):" style="-fx-font-size: 14px;" />
+            <Label text="28 kg" style="-fx-font-size: 24px; -fx-text-fill: #d81b60;" />
+        </VBox>
+    </HBox>
+
+</VBox>

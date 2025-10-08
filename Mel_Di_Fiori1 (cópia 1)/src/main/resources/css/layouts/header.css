@@ -1,0 +1,106 @@
+/* =================================== CABEÇALHO =============================================================================== */
+			  /* ==== CABEÇALHO (melhorias visuais) ==== */
+			  .cabecalho {
+				-fx-background-color: black;
+				-fx-padding: 12 16;
+				-fx-border-width: 0;  /* Remove bordas */
+				-fx-border-color: transparent;
+			  }
+  
+			  .label.titulo-principal {
+				  -fx-font-family: "Segoe UI", sans-serif;
+				  -fx-font-size: 25px;
+				  -fx-font-weight: bold;
+				  -fx-text-fill: #ffffff;
+  
+			  }
+			  .label.titulo-principalcolmeia {
+				  -fx-font-family: "Segoe UI", sans-serif;
+				  -fx-font-size: 25px;
+				  -fx-font-weight: bold;
+				  -fx-text-fill: #000000;
+				  
+  
+			  }
+  
+			  .relogio-label {
+				  -fx-font-size: 16pt;        /* Fonte maior para o relógio */
+				  -fx-text-fill: #FFFBDD;
+				  -fx-font-family: "Consolas", "Courier New", monospace;
+				  
+			  }
+  
+			  .estacao-label {
+				  -fx-font-size: 12pt;        /* Fonte um pouco menor */
+				  -fx-text-fill: #FFFFFF;     /* Marrom Claro (mais suave) */
+				  -fx-font-style: italic;     /* Itálico para um toque leve */
+				  -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			  }
+  
+			  .font-Icon-Relogio {
+				  -fx-icon-size: 20px;
+				  -fx-fill: #FFFFFF;
+			  }
+  
+  
+			  /* Nome do usuário */
+			  .nome-usuario {
+				  -fx-font-size: 20px;
+				  -fx-font-weight: bold;
+				  -fx-text-fill: #ffffff;
+				  -fx-padding: 0 10 0 0; /* espaçamento à direita para separar da imagem */
+				  -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			  }
+  
+			  /* Estilo da imagem do usuário (ImageView) */
+			  .image-view {
+				  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+				  -fx-background-radius: 20px; /* bordas arredondadas */
+				  -fx-cursor: hand;
+			  }
+  
+			  /* Botão de pesquisa */
+			  .botao-pesquisa {
+				  /* Herdar o estilo base dos botões */
+				  -fx-background-color: transparent; /* fundo transparente, para não ficar igual aos botões "normais" */
+				  -fx-padding: 5; /* padding igual aos outros botões (ajuste conforme o seu) */
+				  -fx-cursor: hand;
+				  -fx-border-color: transparent;
+				  -fx-effect: none;
+				  -fx-color: white;
+  
+				  /* Se quiser, ajuste a largura e altura para ficar igual aos outros botões */
+				  -fx-min-width: 40px;
+				  -fx-min-height: 40px;
+				  -fx-alignment: center;
+			  }
+  
+			  .font-Icon {
+				  -fx-font-size: 18px; /* Ajuste conforme o tamanho dos seus ícones nos botões */
+				  -fx-fill: #ffffff; /* Cor padrão dos ícones */
+			  }
+  
+			  /* Efeito hover no botão */
+			  .botao-pesquisa:hover {
+					  -fx-background-color: rgba(255, 255, 255, 0.08);
+					  -fx-text-fill: #0e0d0a;
+			  }
+  
+  
+  
+  /* ======================================== Campos de texto ======================================================================== */
+  .text-field {
+	  -fx-background-color: #FFFFFF;
+	  -fx-border-color: #CCCCCC;
+	  -fx-border-radius: 4;
+	  -fx-background-radius: 4;
+	  -fx-padding: 6;
+  }
+  .text-field:focused {
+	  -fx-border-color: #000000;
+  }
+  
+  .div {
+	  -fx-flex-align: center;
+  }
+  

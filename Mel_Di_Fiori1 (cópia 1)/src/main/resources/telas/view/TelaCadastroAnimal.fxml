@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="crud_animal.AnimalCreateController"
+            stylesheets="@/css/style.css">
+            
+    <VBox alignment="TOP_CENTER" spacing="20" 
+          AnchorPane.topAnchor="30" AnchorPane.bottomAnchor="30" 
+          AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+        
+        <Label text="📝 Cadastro de Animal" 
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" prefWidth="120"/>
+                <ColumnConstraints halignment="LEFT" prefWidth="300"/>
+            </columnConstraints>
+            
+            <!-- ✅ TUTOR OBRIGATÓRIO - PRIMEIRO CAMPO -->
+            <Label text="Tutor *:" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #e74c3c;"/>
+            <ComboBox fx:id="comboTutor" promptText="Selecione o tutor (OBRIGATÓRIO)" 
+                     prefWidth="300" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                     style="-fx-border-color: #e74c3c; -fx-border-width: 1;"/>
+            
+            <!-- Nome do Animal -->
+            <Label text="Nome *:" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="txtNome" promptText="Digite o nome do animal" 
+                      prefWidth="300" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            
+            <!-- Espécie -->
+            <Label text="Espécie *:" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <ComboBox fx:id="comboEspecie" promptText="Selecione a espécie" 
+                     prefWidth="300" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            
+            <!-- Raça -->
+            <Label text="Raça *:" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextField fx:id="txtRaca" promptText="Digite a raça" 
+                      prefWidth="300" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            
+            <!-- Idade -->
+            <Label text="Idade:" GridPane.rowIndex="4" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                <Spinner fx:id="spinnerIdade" prefWidth="80"/>
+                <Label text="anos" style="-fx-text-fill: #7f8c8d;"/>
+            </HBox>
+            
+            <!-- Peso -->
+            <Label text="Peso:" GridPane.rowIndex="5" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="1">
+                <TextField fx:id="txtPeso" promptText="0.0" prefWidth="100"/>
+                <Label text="kg" style="-fx-text-fill: #7f8c8d;"/>
+            </HBox>
+            
+            <!-- Observações -->
+            <Label text="Observações:" GridPane.rowIndex="6" GridPane.columnIndex="0"
+                   style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <TextArea fx:id="txtObservacoes" promptText="Observações sobre o animal" 
+                     prefRowCount="4" prefWidth="300" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Legenda de campos obrigatórios -->
+        <Label text="* Campos obrigatórios - O tutor é OBRIGATÓRIO para cadastrar um animal" 
+               style="-fx-text-fill: #e74c3c; -fx-font-size: 12px; -fx-font-weight: bold; -fx-padding: 10;"/>
+
+        <!-- Botões -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="⬅️ Voltar" onAction="#voltarParaLista" 
+                    styleClass="btn-secondary"/>
+            <Button text="🗑️ Limpar" onAction="#limparCampos" 
+                    styleClass="btn-danger"/>
+            <Button text="➕ Cadastrar Animal" onAction="#salvarAnimal" 
+                    styleClass="btn-success action"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>
